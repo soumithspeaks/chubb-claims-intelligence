@@ -1,0 +1,11 @@
+path: C:\Users\anonymous\Downloads\Megathon\data\damage_detection  # dataset root dir
+train: train/images  # train images
+val: val/images      # val images
+
+# Number of classes
+nc: 2
+
+# Classes
+names:
+  0: damaged
+  1: whole

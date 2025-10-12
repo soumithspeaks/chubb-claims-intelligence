@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/anonymous/Downloads/Megathon/models/damage_detector/mlruns/139664205774916556/3c524898eb144cc08a845a2b55601e2e/artifacts
+end_time: 1760218571967
+entry_point_name: ''
+experiment_id: '139664205774916556'
+lifecycle_stage: active
+run_id: 3c524898eb144cc08a845a2b55601e2e
+run_name: damage_detection_training
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760218571941
+status: 4
+tags: []
+user_id: anonymous

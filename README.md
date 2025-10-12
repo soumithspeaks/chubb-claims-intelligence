@@ -47,19 +47,7 @@ A comprehensive insurance claims processing platform that combines modern web in
 
 2. Choose your interface:
 
-   a) Enhanced UI (Streamlit):
-   ```powershell
-   # Windows
-   .\run_enhanced_ui.ps1
-
-   # Linux/Mac
-   python -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   streamlit run app/frontend/enhanced_app.py
-   ```
-
-   b) Premium UI (Next.js):
+   a) Premium UI (Next.js):
    ```bash
    cd chubb-claims-intelligence
    npm install

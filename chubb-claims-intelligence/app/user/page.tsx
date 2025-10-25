@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -14,11 +14,26 @@ export default function UserPage() {
   const [classificationResult, setClassificationResult] = useState<any>(null)
   const [isClassifying, setIsClassifying] = useState(false)
 
+  // Cleanup object URLs on unmount to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      selectedImages.forEach(url => {
+        if (url.startsWith('blob:')) {
+          URL.revokeObjectURL(url)
+        }
+      })
+    }
+  }, [selectedImages])
+
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
     if (files) {
-      const imageUrls = Array.from(files).map(file => URL.createObjectURL(file))
-      setSelectedImages(imageUrls.slice(0, 5)) // Max 5 images
+      // Create object URLs for uploaded files (these are safe blob: URLs)
+      const imageUrls = Array.from(files)
+        .filter(file => file.type.startsWith('image/')) // Only accept image files
+        .map(file => URL.createObjectURL(file))
+        .slice(0, 5) // Max 5 images
+      setSelectedImages(imageUrls)
     }
   }
 
@@ -110,6 +125,7 @@ export default function UserPage() {
                   <div className="grid grid-cols-3 gap-2 mt-2">
                     {selectedImages.map((url, idx) => (
                       <div key={idx} className="aspect-square rounded-lg overflow-hidden border">
+                        {/* Safe: Using blob: URLs created by URL.createObjectURL() - not user input */}
                         <img src={url} alt={`Waste ${idx + 1}`} className="w-full h-full object-cover" />
                       </div>
                     ))}

@@ -7,25 +7,33 @@ import { Separator } from "@/components/ui/separator"
 export default function Header() {
   return (
     <header className="border-b bg-card">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="flex items-center gap-3" aria-label="CHUBB Claims Intelligence Home">
-          <div className="rounded-md bg-primary px-2.5 py-1 text-xs font-semibold leading-none text-primary-foreground">
-            CHUBB
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4">
+        <Link href="/" className="flex items-center gap-3" aria-label="EcoSmart Waste Management Home">
+          <div className="rounded-md bg-green-600 px-2.5 py-1 text-xs font-semibold leading-none text-white">
+            ♻️ EcoSmart
           </div>
-          <div className="text-sm text-muted-foreground">Claims Intelligence</div>
+          <div className="text-sm text-muted-foreground">Waste Management Platform</div>
         </Link>
         <nav className="hidden items-center gap-2 md:flex">
-          <Button variant="ghost" className="text-sm">
-            Overview
-          </Button>
-          <Button variant="ghost" className="text-sm">
-            Models
-          </Button>
-          <Button variant="ghost" className="text-sm">
-            Reports
-          </Button>
+          <Link href="/user">
+            <Button variant="ghost" className="text-sm">
+              User App
+            </Button>
+          </Link>
+          <Link href="/agent">
+            <Button variant="ghost" className="text-sm">
+              Agent App
+            </Button>
+          </Link>
+          <Link href="/admin">
+            <Button variant="ghost" className="text-sm">
+              Admin
+            </Button>
+          </Link>
           <Separator orientation="vertical" className="mx-2 h-5" />
-          <Button className="text-sm">New Claim</Button>
+          <Link href="/docs" target="_blank">
+            <Button className="text-sm bg-green-600 hover:bg-green-700">API Docs</Button>
+          </Link>
         </nav>
       </div>
     </header>

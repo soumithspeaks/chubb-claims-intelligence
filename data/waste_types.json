@@ -1,0 +1,107 @@
+{
+  "waste_categories": [
+    {
+      "id": 1,
+      "name": "Plastic",
+      "subcategories": [
+        {"code": "PET", "name": "Polyethylene Terephthalate", "price_per_kg": 0.50},
+        {"code": "HDPE", "name": "High-Density Polyethylene", "price_per_kg": 0.45},
+        {"code": "PVC", "name": "Polyvinyl Chloride", "price_per_kg": 0.30},
+        {"code": "LDPE", "name": "Low-Density Polyethylene", "price_per_kg": 0.35},
+        {"code": "PP", "name": "Polypropylene", "price_per_kg": 0.40},
+        {"code": "PS", "name": "Polystyrene", "price_per_kg": 0.25}
+      ],
+      "color_code": "#FFA726",
+      "icon": "♻️"
+    },
+    {
+      "id": 2,
+      "name": "Paper",
+      "subcategories": [
+        {"code": "CARDBOARD", "name": "Cardboard", "price_per_kg": 0.30},
+        {"code": "NEWSPAPER", "name": "Newspaper", "price_per_kg": 0.15},
+        {"code": "OFFICE", "name": "Office Paper", "price_per_kg": 0.20},
+        {"code": "MIXED", "name": "Mixed Paper", "price_per_kg": 0.10}
+      ],
+      "color_code": "#8D6E63",
+      "icon": "📄"
+    },
+    {
+      "id": 3,
+      "name": "Metal",
+      "subcategories": [
+        {"code": "ALUMINUM", "name": "Aluminum", "price_per_kg": 2.00},
+        {"code": "STEEL", "name": "Steel", "price_per_kg": 0.80},
+        {"code": "COPPER", "name": "Copper", "price_per_kg": 5.00},
+        {"code": "MIXED", "name": "Mixed Metal", "price_per_kg": 0.60}
+      ],
+      "color_code": "#90A4AE",
+      "icon": "🔩"
+    },
+    {
+      "id": 4,
+      "name": "Glass",
+      "subcategories": [
+        {"code": "CLEAR", "name": "Clear Glass", "price_per_kg": 0.15},
+        {"code": "COLORED", "name": "Colored Glass", "price_per_kg": 0.10},
+        {"code": "BROKEN", "name": "Broken Glass", "price_per_kg": 0.05}
+      ],
+      "color_code": "#4DD0E1",
+      "icon": "🍾"
+    },
+    {
+      "id": 5,
+      "name": "E-waste",
+      "subcategories": [
+        {"code": "PHONES", "name": "Mobile Phones", "price_per_kg": 5.00},
+        {"code": "COMPUTERS", "name": "Computers/Laptops", "price_per_kg": 3.00},
+        {"code": "BATTERIES", "name": "Batteries", "price_per_kg": 2.00},
+        {"code": "APPLIANCES", "name": "Small Appliances", "price_per_kg": 1.50},
+        {"code": "CABLES", "name": "Cables/Wires", "price_per_kg": 1.00}
+      ],
+      "color_code": "#EF5350",
+      "icon": "💻"
+    },
+    {
+      "id": 6,
+      "name": "Organic",
+      "subcategories": [
+        {"code": "FOOD", "name": "Food Waste", "price_per_kg": 0.02},
+        {"code": "GARDEN", "name": "Garden Waste", "price_per_kg": 0.05},
+        {"code": "COMPOST", "name": "Compostable", "price_per_kg": 0.03}
+      ],
+      "color_code": "#66BB6A",
+      "icon": "🌱"
+    },
+    {
+      "id": 7,
+      "name": "Hazardous",
+      "subcategories": [
+        {"code": "CHEMICALS", "name": "Chemicals", "price_per_kg": 0.00},
+        {"code": "PAINT", "name": "Paint/Solvents", "price_per_kg": 0.00},
+        {"code": "MEDICAL", "name": "Medical Waste", "price_per_kg": 0.00}
+      ],
+      "color_code": "#FF5722",
+      "icon": "⚠️",
+      "requires_special_handling": true
+    },
+    {
+      "id": 8,
+      "name": "Textiles",
+      "subcategories": [
+        {"code": "CLOTHING", "name": "Clothing", "price_per_kg": 0.20},
+        {"code": "FABRIC", "name": "Fabric Scraps", "price_per_kg": 0.10},
+        {"code": "SHOES", "name": "Shoes", "price_per_kg": 0.15}
+      ],
+      "color_code": "#AB47BC",
+      "icon": "👕"
+    }
+  ],
+  "environmental_impact": {
+    "plastic_recycled_kg_to_co2_saved_kg": 2.5,
+    "paper_recycled_kg_to_trees_saved": 0.017,
+    "metal_recycled_kg_to_energy_saved_kwh": 4.0,
+    "glass_recycled_kg_to_co2_saved_kg": 0.3,
+    "ewaste_recycled_kg_to_water_saved_liters": 50
+  }
+}

@@ -353,7 +353,7 @@ Calculate user's environmental impact.
 ## Data Models
 
 ### Waste Categories
-- **Plastic**: PET, HDPE, PVC, LDPE, PP, PS (${content}0.20-$0.50/kg)
+- **Plastic**: PET, HDPE, PVC, LDPE, PP, PS ($0.20-$0.50/kg)
 - **Paper**: Cardboard, Newspaper, Office ($0.10-$0.30/kg)
 - **Metal**: Aluminum, Steel, Copper ($0.80-$5.00/kg)
 - **Glass**: Clear, Colored, Broken ($0.05-$0.15/kg)

@@ -19,6 +19,8 @@ git clone https://github.com/soumithspeaks/chubb-claims-intelligence.git
 cd chubb-claims-intelligence
 ```
 
+> **Note:** The repository name reflects the original project. This has been transformed into a waste management platform.
+
 ### 2. Backend Setup
 
 #### Install Python Dependencies
@@ -64,6 +66,7 @@ The API will be available at:
 #### Install Node.js Dependencies
 
 ```bash
+# Navigate to frontend directory
 cd chubb-claims-intelligence
 
 # Using npm (with legacy peer deps for compatibility)
@@ -208,6 +211,7 @@ gunicorn app.api.waste_management_api:app \
 #### Frontend
 
 ```bash
+# Navigate to frontend directory
 cd chubb-claims-intelligence
 
 # Build for production
@@ -281,6 +285,26 @@ COPY data ./data
 EXPOSE 8000
 
 CMD ["gunicorn", "app.api.waste_management_api:app", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000"]
+```
+
+### Frontend Dockerfile
+
+Create `chubb-claims-intelligence/Dockerfile`:
+
+```dockerfile
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install --legacy-peer-deps
+
+COPY . .
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
 ```
 
 ### Deploy with Docker
@@ -459,5 +483,6 @@ npm install @sentry/nextjs
 ## Support
 
 Need help? Contact:
-- GitHub Issues: https://github.com/soumithspeaks/chubb-claims-intelligence/issues
+- GitHub Issues: [Report an issue](https://github.com/soumithspeaks/chubb-claims-intelligence/issues)
+- Project: Waste Management Platform (transformed from insurance claims intelligence)
 - Email: support@wastemanagement.platform
